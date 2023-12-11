@@ -1,4 +1,4 @@
-# Arduino Serial Monitor
+# Arduino Standalone Serial Monitor
 Arduino Standalone Serial Monitor written in C# using Visual Studio 2022 Community Edition
 
 It allows to communicate with an Arduino as the Serial Monitor provided into the Arduino IDE.
@@ -9,8 +9,9 @@ You can send command by adding text into text field and send command by pressing
 You can also configure the return character used for new line (none, '\n', '\r', '\n\r')
 You can configure baud rate speed. It is set to 115200 baud by default
 
-# 
-![image](files://./SerialMonitor.png)
+## GUI 
+
+![Alt text](./SerialMonitor.png?raw=true "Arduino standalone Serial Monitor")
 
 This code has been inspired by https://github.com/Gigasitron-xcross/Cpp_SerialPort
 
