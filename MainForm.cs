@@ -74,8 +74,11 @@ namespace SerialMonitor
         public void UpdateOutputText(String Str)
         {
             tboxReceive.Text += Str;
-            tboxReceive.SelectionStart = tboxReceive.Text.Length;
-            tboxReceive.ScrollToCaret();
+            if (cboxAutoscroll.Checked)
+            {
+                tboxReceive.SelectionStart = tboxReceive.Text.Length;
+                tboxReceive.ScrollToCaret();
+            }
         }
         #endregion
 
@@ -84,7 +87,7 @@ namespace SerialMonitor
         void SerialOnReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
             String str = Serial.ReadExisting();
-            
+
            Invoke(new UPDATE_OUTPUT_TEXT(UpdateOutputText), str);
         }
         #endregion
