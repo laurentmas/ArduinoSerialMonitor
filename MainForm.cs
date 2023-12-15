@@ -248,6 +248,7 @@ namespace SerialMonitor
             if (e.KeyChar == Convert.ToChar(Keys.Return))
             {
                 SendSerialCommand();
+                e.Handled = true; //remove enter key pressed windows default sound
             }
         }
     }
