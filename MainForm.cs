@@ -30,6 +30,7 @@ namespace SerialMonitor
         {
             // Get all existing Com Port names
             string[] Ports = System.IO.Ports.SerialPort.GetPortNames();
+            Ports = Ports.Distinct().ToArray();
             Array.Sort(Ports);
             string selectDefaultPort = "";
             cboxComport.Items.Clear();
