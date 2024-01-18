@@ -35,10 +35,10 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
             this.tboxData = new System.Windows.Forms.TextBox();
-            this.tboxReceive = new System.Windows.Forms.TextBox();
             this.btnClearOutput = new System.Windows.Forms.Button();
             this.cboxLinetype = new System.Windows.Forms.ComboBox();
             this.cboxAutoscroll = new System.Windows.Forms.CheckBox();
+            this.richTextBoxReceive = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // cboxComport
@@ -102,23 +102,6 @@
             this.tboxData.TabIndex = 3;
             this.tboxData.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tboxData_KeyPress);
             // 
-            // tboxReceive
-            // 
-            this.tboxReceive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tboxReceive.BackColor = System.Drawing.SystemColors.Window;
-            this.tboxReceive.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tboxReceive.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxReceive.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tboxReceive.Location = new System.Drawing.Point(8, 71);
-            this.tboxReceive.Multiline = true;
-            this.tboxReceive.Name = "tboxReceive";
-            this.tboxReceive.ReadOnly = true;
-            this.tboxReceive.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tboxReceive.Size = new System.Drawing.Size(568, 204);
-            this.tboxReceive.TabIndex = 5;
-            // 
             // btnClearOutput
             // 
             this.btnClearOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -154,15 +137,30 @@
             this.cboxAutoscroll.Text = "Autoscroll";
             this.cboxAutoscroll.UseVisualStyleBackColor = true;
             // 
+            // richTextBoxReceive
+            // 
+            this.richTextBoxReceive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxReceive.BackColor = System.Drawing.SystemColors.Window;
+            this.richTextBoxReceive.Font = new System.Drawing.Font("Courier New", 10F);
+            this.richTextBoxReceive.Location = new System.Drawing.Point(8, 70);
+            this.richTextBoxReceive.Name = "richTextBoxReceive";
+            this.richTextBoxReceive.ReadOnly = true;
+            this.richTextBoxReceive.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBoxReceive.Size = new System.Drawing.Size(568, 204);
+            this.richTextBoxReceive.TabIndex = 10;
+            this.richTextBoxReceive.Text = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 313);
+            this.Controls.Add(this.richTextBoxReceive);
             this.Controls.Add(this.cboxAutoscroll);
             this.Controls.Add(this.cboxLinetype);
             this.Controls.Add(this.btnClearOutput);
-            this.Controls.Add(this.tboxReceive);
             this.Controls.Add(this.tboxData);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.btnRefresh);
@@ -187,10 +185,10 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox tboxData;
-        private System.Windows.Forms.TextBox tboxReceive;
         private System.Windows.Forms.Button btnClearOutput;
         private System.Windows.Forms.ComboBox cboxLinetype;
         private System.Windows.Forms.CheckBox cboxAutoscroll;
+        private System.Windows.Forms.RichTextBox richTextBoxReceive;
     }
 }
 

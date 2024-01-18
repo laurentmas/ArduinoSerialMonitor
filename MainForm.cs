@@ -74,11 +74,12 @@ namespace SerialMonitor
         public delegate void UPDATE_OUTPUT_TEXT(String Str);
         public void UpdateOutputText(String Str)
         {
-            tboxReceive.Text += Str;
+            richTextBoxReceive.AppendText(Str);
             if (cboxAutoscroll.Checked)
             {
-                tboxReceive.SelectionStart = tboxReceive.Text.Length;
-                tboxReceive.ScrollToCaret();
+                //tboxReceive.SelectionStart = tboxReceive.Text.Length;
+                if (Str.Contains("\n"))
+                    richTextBoxReceive.ScrollToCaret();
             }
         }
         #endregion
@@ -241,7 +242,7 @@ namespace SerialMonitor
 
         private void btnClearOutput_Click(object sender, EventArgs e)
         {
-            tboxReceive.Clear();
+            richTextBoxReceive.Clear();
         }
 
         private void tboxData_KeyPress(object sender, KeyPressEventArgs e)
